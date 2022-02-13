@@ -11,18 +11,18 @@ const Map = () => {
     const [viewport, setViewport] = useState({
         width: 400,
         height: 400,
-        latitude: 35.681236,
-        longitude: 139.767125,
-        zoom: 10
+        latitude: 35.495694,
+        longitude: 140.304306,
+        zoom: 9
     });
 
     const layer = new GeoJsonLayer({
         data,
         filled: true,
         stroked: true,
-        getLineWidth: 10,
-        getLineColor: [0, 0, 0],
-        getFillColor: [0, 64, 245, 60]
+        getLineWidth: 16,
+        getLineColor: [255, 255, 255],
+        getFillColor: [25, 118, 210, 128]
     })
 
     return (
