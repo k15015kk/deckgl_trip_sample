@@ -38,6 +38,7 @@ const Map = () => {
             <ReactMapGL
                 mapLib={maplibregl}
                 mapStyle={process.env.NEXT_PUBLIC_MAP_URL}
+                // mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
             />
         </DeckGL>
         </>
