@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
+import Map from '@/components/Map';
 
 const Home: NextPage = () => {
   return (
-    <h1 className='underline'>Hello World!</h1>
+    <div className='h-screen'>
+      <Map></Map>
+    </div>
   )
 }
 
