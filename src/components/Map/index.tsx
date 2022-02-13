@@ -1,8 +1,9 @@
-import ReactMapGL from 'react-map-gl'
+import ReactMapGL, {NavigationControl} from 'react-map-gl'
 import { useState } from "react";
 import {DeckGL} from "deck.gl";
 import {GeoJsonLayer} from "@deck.gl/layers";
 import maplibregl from 'maplibre-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const Map = () => {
 
@@ -39,9 +40,12 @@ const Map = () => {
                 mapLib={maplibregl}
                 mapStyle={process.env.NEXT_PUBLIC_MAP_URL}
                 // mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
-            />
+            >
+                <NavigationControl />
+            </ReactMapGL>
         </DeckGL>
         </>
     );
+
 }
 export default Map;
