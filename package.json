@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "export": "BUILD_OPTION=development next export",
+    "build": "npm run clean && next build && npm run export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next out"
   },
   "dependencies": {
     "next": "12.0.10",
@@ -15,8 +17,11 @@
   "devDependencies": {
     "@types/node": "17.0.17",
     "@types/react": "17.0.39",
+    "autoprefixer": "^10.4.2",
     "eslint": "8.9.0",
     "eslint-config-next": "12.0.10",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.22",
     "typescript": "4.5.5"
   }
 }
